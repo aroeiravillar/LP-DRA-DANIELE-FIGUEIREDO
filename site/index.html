@@ -1524,6 +1524,57 @@ section{scroll-margin-top:80px}
 
 /* v19: logo sempre proporcional (não distorcer) */
 .nav-logo-mark{object-fit:contain !important}
+
+/* ============ Testimonials carousel (v20) ============ */
+.testimonials-carousel{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  -webkit-mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  padding:4px 0;
+}
+.testimonials-track{
+  display:flex;
+  gap:24px;
+  width:max-content;
+  animation:testimonial-scroll 120s linear infinite;
+  align-items:stretch;
+}
+.testimonials-carousel:hover .testimonials-track,
+.testimonials-carousel:focus-within .testimonials-track{animation-play-state:paused}
+.testimonials-carousel .testimonial-card{
+  flex:0 0 400px;
+  width:400px;
+  min-height:auto;
+  white-space:normal;
+  margin:0;
+}
+.testimonials-carousel .tc-text{
+  font-size:16px;
+  line-height:1.55;
+  margin-bottom:24px;
+  display:-webkit-box;
+  -webkit-line-clamp:8;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+@keyframes testimonial-scroll{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+@media (prefers-reduced-motion: reduce){
+  .testimonials-track{animation:none}
+}
+@media (max-width: 900px){
+  .testimonials-carousel .testimonial-card{flex:0 0 320px;width:320px}
+  .testimonials-track{animation-duration:90s;gap:18px}
+}
+@media (max-width: 600px){
+  .testimonials-carousel .testimonial-card{flex:0 0 280px;width:280px;padding:26px 22px}
+  .testimonials-carousel .tc-text{font-size:14.5px;line-height:1.5;-webkit-line-clamp:10}
+  .testimonials-track{animation-duration:70s;gap:14px}
+}
 </style>
 </head>
 <body >
@@ -1644,7 +1695,7 @@ section{scroll-margin-top:80px}
     <div class="about-content reveal in">
       <div class="eyebrow" style="font-size: 15px">— Sobre a Dra. Daniele</div>
       <h2 style="font-family: 'Ivy Mode'; font-size: 14px">Cuidado médico <em>integrado</em>, com olhar humano.</h2>
-      <p>Nasci em Esmeraldas, morei por várias cidades do Brasil e, há mais de 10 anos, escolhi Belo Horizonte como casa. Desde cedo, alimentação saudável e exercício fazem parte da minha vida — e hoje fazem parte do meu trabalho.</p>
+      <p>Nasci em Esmeraldas, morei por várias cidades do Brasil e, há mais de 30 anos, vim morar em Belo Horizonte, onde moro até hoje. Desde cedo, alimentação saudável e exercício fazem parte da minha vida — e hoje fazem parte do meu trabalho.</p>
       <p>Me formei em Medicina pela Faculdade de Ciências Médicas de MG em 2012. Depois vieram a residência em Ginecologia e Obstetrícia na Maternidade Odete Valadares (FHEMIG), a especialização em Cirurgia Ginecológica no Hospital Felício Rocho e a pós-graduação em Nutrologia no Hospital Israelita Albert Einstein.</p>
       <p>Me apaixonei pela Nutrologia e sigo me atualizando com direcionamento da <strong>Nutrology Academy</strong>. Um dos meus objetivos nesta caminhada é <em>fazer a diferença na vida de cada pessoa que passa por mim</em>.</p>
 
@@ -1910,40 +1961,295 @@ section{scroll-margin-top:80px}
       <h2>O que dizem <em>os pacientes</em></h2>
       <p class="testimonials-sub" style="margin: 0 80px 0 0"></p>
     </div>
-    <div class="testimonials-grid reveal">
-      <article class="testimonial-card testimonial-placeholder">
-        <div class="tc-quote-mark">&ldquo;</div>
-        <p class="tc-text">Espaço reservado para o depoimento da paciente. Assim que os depoimentos reais forem enviados, eles entram aqui — com nome, cidade e resultado alcançado.</p>
-        <div class="tc-author">
-          <div class="tc-avatar" aria-hidden="true"></div>
-          <div>
-            <div class="tc-name">Paciente — em breve</div>
-            <div class="tc-meta">Belo Horizonte · MG</div>
+    <div class="testimonials-carousel reveal" aria-roledescription="carousel">
+      <div class="testimonials-track">
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Não teve como não lembrar de vc ao completar a Maratona.. Vc foi um anjinho que me surgiu. Foi leve demais, foi bom, me senti muito amparada com vc, eu confio muito no seu trabalho. Meus amigos até se assustaram ao saber que eu ia usar gel.. Bebi água também, eu fiz tudo direitinho dentro do que eu senti que me corpo ia levar de boas! Que Deus te abençoe muito Dani. Quero que vc seja a minha médica pra sempre!</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">S.A.Q.</div>
+              <div class="tc-meta">Rio de Janeiro · RJ</div>
+            </div>
           </div>
-        </div>
-      </article>
-      <article class="testimonial-card testimonial-placeholder">
-        <div class="tc-quote-mark">&ldquo;</div>
-        <p class="tc-text">Espaço reservado para o depoimento da paciente. Assim que os depoimentos reais forem enviados, eles entram aqui — com nome, cidade e resultado alcançado.</p>
-        <div class="tc-author">
-          <div class="tc-avatar" aria-hidden="true"></div>
-          <div>
-            <div class="tc-name">Paciente — em breve</div>
-            <div class="tc-meta">São Paulo · SP</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Estou me sentindo infinitamente melhor. Com menos cansaço, conseguindo dormir melhor. Mais disposição para os treinos tanto de corrida quanto a musculação. Graças a Deus e a você.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">C.F.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
           </div>
-        </div>
-      </article>
-      <article class="testimonial-card testimonial-placeholder">
-        <div class="tc-quote-mark">&ldquo;</div>
-        <p class="tc-text">Espaço reservado para o depoimento da paciente. Assim que os depoimentos reais forem enviados, eles entram aqui — com nome, cidade e resultado alcançado.</p>
-        <div class="tc-author">
-          <div class="tc-avatar" aria-hidden="true"></div>
-          <div>
-            <div class="tc-name">Paciente — em breve</div>
-            <div class="tc-meta">Brasil</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Minha autoestima melhorou. Mesmo sabendo que tenho ainda 6 a 7kg para eliminar, eu sinto que estou vencendo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.P.C.</div>
+              <div class="tc-meta">Esmeraldas · MG</div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Iniciei o acompanhamento com a Dra. Daniele no meio do ciclo pra minha primeira maratona em Agosto de 2025. Ela conseguiu adaptar uma dieta e suplementação baseada na minha rotina do dia-a-dia, além de um acompanhamento mais de perto nas duas últimas semanas da minha prova alvo. Resultado? Completei os 42km da prova bem (sem precisar caminhar durante a prova) e inteiro (no dia seguinte trabalhei normalmente) com um tempo abaixo do planejado. Esse acompanhamento com a nutrologia fez a diferença na minha prova!</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">F.A.S.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Desde que comecei o plano alimentar com a maravilhosa Dra. Daniele, aquele desejo doido por doce foi embora e agora to comendo super bem (e feliz!). Dani, você é incrível! Você arrasa demais nas receitinhas. Obrigada por tanto cuidado e carinho.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">F.G.O.</div>
+              <div class="tc-meta">Rio de Janeiro · RJ</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Está sendo incrível o plano alimentar. Em uma semana eu senti muita diferença no meu corpo (a barriga ta mais sequinha) e to comendo mais, to felizzz. É estranho comer sem culpa. Eu to amando demais, está mudando muita coisa, me impactando positivamente, mesmo com pouco tempo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">A.F.C.</div>
+              <div class="tc-meta">São Paulo · SP</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">A prova foi incrível, eu fiz um bom ciclo, eu estava mentalmente tranquila embora ansiosa! O plano alimentar no último mês ajudou demais. Comer bastante carbo antes ajudou muito. Obrigada pelas dicas dos géis. Reduzi o meu tempo em 30 min da maratona do ano passado para este. Quero te agradecer, Dani, pela médica que vc é, sério. Muito obrigada por me ajudar nesta maratona, com a minha saúde, por tudo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">G.A.</div>
+              <div class="tc-meta">Florianópolis · SC</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Hoje lavei meu cabelo e não saiu quase nada. Eu acho que a nossa consulta ajudou muito, as suplementações, alimentação e sono.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.F.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Neste ano fiz um ciclo melhor de Maratona. E depois que você me passou o plano, a performance melhorou abruptamente, coisa absurda. O tempo melhorou, mas a disposição foi muito melhor.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">A.L.A.</div>
+              <div class="tc-meta">São Paulo · SP</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Subir na balança tem sido uma alegria depois de tantos anos subindo e saindo triste. Entrei numa calça que nem fechava mais e está um pouquinho folgada. Estou muito feliz! Obrigada por ser esse anjo na minha vida.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.C.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Depois que comecei a me alimentar melhor e também suplementar, minha vida virou outra, lógico pra beeeem melhor. Deu uma diferença boa com relação a aparência, percebi que as medidas caíram, calças estão mais largas, camisas que não serviam, começaram a servir, meu rosto deu uma afinada.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">K.L.M.</div>
+              <div class="tc-meta">Betim · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Dra. Daniele, queria agradecer por todo acompanhamento e pelo protocolo que você elaborou para mim, ele veio com mudança que tanto buscava com novos hábitos alimentares, e isto fez toda a diferença, não só na perda de peso, mas principalmente na minha qualidade de vida. Hoje, grávida, tenho ainda mais certeza da importância desse cuidado, porque sei que estou proporcionando uma nutrição melhor para o meu bebê.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">I.F.M.</div>
+              <div class="tc-meta">França</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Dra. Daniele, gostaria te agradecer pelo cuidado e pela dedicação com a minha esposa. Acompanhar de perto essa mudança despertou em mim a vontade de melhorar também meus hábitos alimentares. Isso fez muita diferença no meu dia a dia e meu rendimento na musculação melhorou bastante. Parabéns pelo seu trabalho, confiar em seus cuidados foi nossa melhor escolha.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">T.W.M.</div>
+              <div class="tc-meta">França</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Não teve como não lembrar de vc ao completar a Maratona.. Vc foi um anjinho que me surgiu. Foi leve demais, foi bom, me senti muito amparada com vc, eu confio muito no seu trabalho. Meus amigos até se assustaram ao saber que eu ia usar gel.. Bebi água também, eu fiz tudo direitinho dentro do que eu senti que me corpo ia levar de boas! Que Deus te abençoe muito Dani. Quero que vc seja a minha médica pra sempre!</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">S.A.Q.</div>
+              <div class="tc-meta">Rio de Janeiro · RJ</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Estou me sentindo infinitamente melhor. Com menos cansaço, conseguindo dormir melhor. Mais disposição para os treinos tanto de corrida quanto a musculação. Graças a Deus e a você.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">C.F.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Minha autoestima melhorou. Mesmo sabendo que tenho ainda 6 a 7kg para eliminar, eu sinto que estou vencendo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.P.C.</div>
+              <div class="tc-meta">Esmeraldas · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Iniciei o acompanhamento com a Dra. Daniele no meio do ciclo pra minha primeira maratona em Agosto de 2025. Ela conseguiu adaptar uma dieta e suplementação baseada na minha rotina do dia-a-dia, além de um acompanhamento mais de perto nas duas últimas semanas da minha prova alvo. Resultado? Completei os 42km da prova bem (sem precisar caminhar durante a prova) e inteiro (no dia seguinte trabalhei normalmente) com um tempo abaixo do planejado. Esse acompanhamento com a nutrologia fez a diferença na minha prova!</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">F.A.S.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Desde que comecei o plano alimentar com a maravilhosa Dra. Daniele, aquele desejo doido por doce foi embora e agora to comendo super bem (e feliz!). Dani, você é incrível! Você arrasa demais nas receitinhas. Obrigada por tanto cuidado e carinho.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">F.G.O.</div>
+              <div class="tc-meta">Rio de Janeiro · RJ</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Está sendo incrível o plano alimentar. Em uma semana eu senti muita diferença no meu corpo (a barriga ta mais sequinha) e to comendo mais, to felizzz. É estranho comer sem culpa. Eu to amando demais, está mudando muita coisa, me impactando positivamente, mesmo com pouco tempo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">A.F.C.</div>
+              <div class="tc-meta">São Paulo · SP</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">A prova foi incrível, eu fiz um bom ciclo, eu estava mentalmente tranquila embora ansiosa! O plano alimentar no último mês ajudou demais. Comer bastante carbo antes ajudou muito. Obrigada pelas dicas dos géis. Reduzi o meu tempo em 30 min da maratona do ano passado para este. Quero te agradecer, Dani, pela médica que vc é, sério. Muito obrigada por me ajudar nesta maratona, com a minha saúde, por tudo.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">G.A.</div>
+              <div class="tc-meta">Florianópolis · SC</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Hoje lavei meu cabelo e não saiu quase nada. Eu acho que a nossa consulta ajudou muito, as suplementações, alimentação e sono.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.F.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Neste ano fiz um ciclo melhor de Maratona. E depois que você me passou o plano, a performance melhorou abruptamente, coisa absurda. O tempo melhorou, mas a disposição foi muito melhor.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">A.L.A.</div>
+              <div class="tc-meta">São Paulo · SP</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Subir na balança tem sido uma alegria depois de tantos anos subindo e saindo triste. Entrei numa calça que nem fechava mais e está um pouquinho folgada. Estou muito feliz! Obrigada por ser esse anjo na minha vida.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">M.C.</div>
+              <div class="tc-meta">Belo Horizonte · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Depois que comecei a me alimentar melhor e também suplementar, minha vida virou outra, lógico pra beeeem melhor. Deu uma diferença boa com relação a aparência, percebi que as medidas caíram, calças estão mais largas, camisas que não serviam, começaram a servir, meu rosto deu uma afinada.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">K.L.M.</div>
+              <div class="tc-meta">Betim · MG</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Dra. Daniele, queria agradecer por todo acompanhamento e pelo protocolo que você elaborou para mim, ele veio com mudança que tanto buscava com novos hábitos alimentares, e isto fez toda a diferença, não só na perda de peso, mas principalmente na minha qualidade de vida. Hoje, grávida, tenho ainda mais certeza da importância desse cuidado, porque sei que estou proporcionando uma nutrição melhor para o meu bebê.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">I.F.M.</div>
+              <div class="tc-meta">França</div>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="tc-quote-mark">“</div>
+          <p class="tc-text">Dra. Daniele, gostaria te agradecer pelo cuidado e pela dedicação com a minha esposa. Acompanhar de perto essa mudança despertou em mim a vontade de melhorar também meus hábitos alimentares. Isso fez muita diferença no meu dia a dia e meu rendimento na musculação melhorou bastante. Parabéns pelo seu trabalho, confiar em seus cuidados foi nossa melhor escolha.</p>
+          <div class="tc-author">
+            <div class="tc-avatar" aria-hidden="true"></div>
+            <div>
+              <div class="tc-name">T.W.M.</div>
+              <div class="tc-meta">França</div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
