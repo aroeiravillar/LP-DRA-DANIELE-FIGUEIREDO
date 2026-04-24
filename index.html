@@ -318,7 +318,7 @@ section{padding:120px 0;position:relative}
 .trust{
   background:var(--ink);
   color:#fff;
-  padding:14px 0;
+  padding:6px 0;
   overflow:hidden;
 }
 .trust-track{
@@ -327,10 +327,11 @@ section{padding:120px 0;position:relative}
   animation: marquee 38s linear infinite;
 }
 .trust-item{
-  display:inline-flex;align-items:center;gap:14px;
-  font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;
   color:rgba(255,255,255,0.78);font-weight:500;
 }
+.trust-item::before{width:4px;height:4px}
 .trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green)}
 @keyframes marquee{
   from{transform:translateX(0)}
@@ -1376,7 +1377,7 @@ section{scroll-margin-top:80px}
   .cta-meta>div{width:100%}
 
   /* Trust marquee: slow + smaller text */
-  .trust{padding:10px 0 !important}
+  .trust{padding:4px 0 !important}
   .trust-item{font-size:11px;letter-spacing:0.14em}
   .trust-track{animation:marquee 14s linear infinite;gap:40px}
 
