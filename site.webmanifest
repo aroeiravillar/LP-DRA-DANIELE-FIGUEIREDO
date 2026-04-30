@@ -1,0 +1,12 @@
+{
+  "name": "Dra. Daniele Oliveira Figueiredo",
+  "short_name": "Dra. Daniele",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#4BBEA7",
+  "background_color": "#FAF9F6",
+  "display": "browser",
+  "start_url": "/"
+}
