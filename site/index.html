@@ -2478,18 +2478,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 
-<!-- gclid → WhatsApp (atribuição de leads do Google Ads) -->
+<!-- WhatsApp link unifier -->
 <script>
 (function () {
   const NUMERO = "5531984196394";
   const MENSAGEM = "Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Daniele.";
-  var gclid = new URLSearchParams(location.search).get("gclid");
-  try {
-    if (gclid) sessionStorage.setItem("gclid", gclid);
-    else gclid = sessionStorage.getItem("gclid");
-  } catch (e) {}
-  var ref = gclid ? " [ref: " + gclid + "]" : "";
-  var href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(MENSAGEM + ref);
+  var href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(MENSAGEM);
   document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="web.whatsapp.com"]')
     .forEach(function (a) { a.href = href; });
 })();
