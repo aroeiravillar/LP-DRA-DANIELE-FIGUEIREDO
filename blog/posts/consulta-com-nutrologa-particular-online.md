@@ -19,13 +19,13 @@ faq:
     answer: "O nutrólogo é médico, formado em Medicina e com especialização em Nutrologia. Pode diagnosticar doenças, solicitar e interpretar exames e prescrever medicamentos quando necessário, além de orientar a alimentação."
 ---
 
-Se você já pesquisou por uma **consulta com nutróloga particular online**, provavelmente quer entender como funciona o atendimento à distância, se ele tem a mesma validade do presencial e como dar o primeiro passo. Este guia responde a tudo isso de forma direta — para que você agende sua consulta com segurança e clareza.
+Se você já pesquisou por uma **consulta com nutróloga particular online**, provavelmente quer entender como funciona o atendimento à distância, se ele tem a mesma validade do presencial e como dar o primeiro passo. Este guia responde a tudo isso de forma direta, para que você agende sua consulta com segurança e clareza.
 
 ## O que é uma consulta com nutróloga particular online?
 
-É um atendimento médico realizado por videochamada com uma **médica nutróloga** — profissional formada em Medicina e especializada em Nutrologia, a área que estuda a relação entre alimentação, metabolismo e saúde. Diferente da nutricionista, a nutróloga é médica: pode **diagnosticar doenças, solicitar e interpretar exames e prescrever medicamentos** quando necessário.
+É um atendimento médico realizado por videochamada com uma **médica nutróloga**, profissional formada em Medicina e especializada em Nutrologia, a área que estuda a relação entre alimentação, metabolismo e saúde. Diferente da nutricionista, a nutróloga é médica: pode **diagnosticar doenças, solicitar e interpretar exames e prescrever medicamentos** quando necessário.
 
-No modelo **particular**, você não depende de convênio. Isso significa consultas com mais tempo, acompanhamento próximo e um plano verdadeiramente individualizado — sem as limitações de retorno impostas pelos planos de saúde.
+No modelo **particular**, você não depende de convênio. Isso significa consultas com mais tempo, acompanhamento próximo e um plano verdadeiramente individualizado, sem as limitações de retorno impostas pelos planos de saúde.
 
 ## A teleconsulta tem a mesma validade da presencial?
 
@@ -40,17 +40,17 @@ Sim. A telemedicina é **regulamentada pelo Conselho Federal de Medicina (CFM)**
 
 O processo é simples e pensado para caber na sua rotina:
 
-1. **Agendamento pelo WhatsApp** — você escolhe o melhor dia e horário disponível.
-2. **Preparação** — antes da consulta, você recebe as orientações e, se já tiver exames recentes, pode enviá-los para análise.
-3. **A consulta por vídeo** — em um ambiente reservado, a Dra. Daniele faz uma avaliação completa do seu histórico, hábitos e metas.
-4. **Plano individualizado** — você recebe as condutas, prescrições e pedidos de exame de forma digital.
-5. **Acompanhamento** — os retornos garantem ajustes finos ao longo do caminho.
+1. **Agendamento pelo WhatsApp**, você escolhe o melhor dia e horário disponível.
+2. **Preparação**, antes da consulta, você recebe as orientações e, se já tiver exames recentes, pode enviá-los para análise.
+3. **A consulta por vídeo**, em um ambiente reservado, a Dra. Daniele faz uma avaliação completa do seu histórico, hábitos e metas.
+4. **Plano individualizado**, você recebe as condutas, prescrições e pedidos de exame de forma digital.
+5. **Acompanhamento**, os retornos garantem ajustes finos ao longo do caminho.
 
 ## O que é avaliado: o Método PLENE
 
 O atendimento da Dra. Daniele é organizado pelo **Método PLENE**, que olha a saúde de forma integral em cinco frentes: **P**erformance, **L**ongevidade, **E**magrecimento, **N**ível de vida e **E**quilíbrio.
 
-Mais do que uma dieta, o objetivo é entender o que o seu corpo precisa e construir mudanças sustentáveis. [Conheça o Método PLENE em detalhe na página inicial.](../index.html#metodo)
+Mais do que uma dieta, o objetivo é entender o que o seu corpo precisa e construir mudanças sustentáveis. [Conheça o Método PLENE em detalhe na página inicial.](/#metodo)
 
 ## Para quem a consulta é indicada?
 
@@ -64,10 +64,10 @@ A consulta com nutróloga particular online costuma ser procurada por pessoas qu
 
 ## Quanto custa uma consulta com nutróloga particular?
 
-Por se tratar de atendimento **exclusivamente particular**, o valor da consulta é informado diretamente no momento do agendamento, de acordo com o formato do acompanhamento. O modelo particular existe justamente para oferecer **tempo, profundidade e continuidade** — algo difícil de garantir dentro dos limites dos convênios.
+Por se tratar de atendimento **exclusivamente particular**, o valor da consulta é informado diretamente no momento do agendamento, de acordo com o formato do acompanhamento. O modelo particular existe justamente para oferecer **tempo, profundidade e continuidade**, algo difícil de garantir dentro dos limites dos convênios.
 
 Para saber o valor atualizado e a disponibilidade de horários, basta chamar no WhatsApp.
 
 ## Como agendar sua consulta online
 
-O agendamento é feito pelo WhatsApp, de forma rápida: você escolhe o horário, recebe as orientações de preparo e, no dia marcado, é atendida por videochamada. Simples assim — sem deslocamento, sem sala de espera.
+O agendamento é feito pelo WhatsApp, de forma rápida: você escolhe o horário, recebe as orientações de preparo e, no dia marcado, é atendida por videochamada. Simples assim, sem deslocamento, sem sala de espera.

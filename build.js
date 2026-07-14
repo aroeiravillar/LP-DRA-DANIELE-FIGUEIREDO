@@ -58,6 +58,10 @@ function root(p) {
   if (!p) return "/";
   return p.startsWith("/") ? p : "/" + p;
 }
+// Remove travessões (— e –) dos textos, trocando por vírgula. Preferência do cliente.
+function noDash(s) {
+  return String(s == null ? "" : s).replace(/\s*[—–]\s*/g, ", ");
+}
 
 // ---- Componentes de layout (iguais à LP) ------------------------------------
 function head({ title, description, keywords, canonical, ogImage, ogType, jsonld }) {
@@ -167,9 +171,13 @@ function footer() {
 // ---- Renderização de um artigo ---------------------------------------------
 function renderArticle(post) {
   const { data, content, slug } = post;
+  // Aplica a preferência de "sem travessão" a todos os textos do artigo
+  data.title = noDash(data.title);
+  if (data.description) data.description = noDash(data.description);
+  if (Array.isArray(data.faq)) data.faq = data.faq.map((f) => f && ({ question: noDash(f.question), answer: noDash(f.answer) }));
   const canonical = `${SITE_URL}/blog/${slug}.html`;
   const ogImage = absUrl(data.image) || `${SITE_URL}/assets/hero-portrait.jpeg`;
-  const bodyHtml = marked.parse(content);
+  const bodyHtml = marked.parse(noDash(content));
 
   // JSON-LD
   const jsonld = [
@@ -268,7 +276,7 @@ function renderArticle(post) {
 ${bodyHtml}
       <div class="cta-box">
         <h3>Pronta para começar seu acompanhamento?</h3>
-        <p>Agende sua consulta online com a Dra. Daniele e receba um plano feito para o seu corpo e a sua rotina — de onde você estiver.</p>
+        <p>Agende sua consulta online com a Dra. Daniele e receba um plano feito para o seu corpo e a sua rotina, de onde você estiver.</p>
         <a href="${WHATSAPP}" target="_blank" rel="noopener" class="btn-wa" data-gtm="conversion-click">Agendar pelo WhatsApp</a>
       </div>
       ${faqHtml}
@@ -339,7 +347,7 @@ function renderIndex(posts) {
   <div class="container">
     <div class="eyebrow">Blog</div>
     <h1>Saúde, nutrologia e longevidade com base em ciência</h1>
-    <p>Conteúdos práticos sobre emagrecimento, performance e qualidade de vida — escritos pela Dra. Daniele Oliveira Figueiredo.</p>
+    <p>Conteúdos práticos sobre emagrecimento, performance e qualidade de vida, escritos pela Dra. Daniele Oliveira Figueiredo.</p>
   </div>
 </header>
 
