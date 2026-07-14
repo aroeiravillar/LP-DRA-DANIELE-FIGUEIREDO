@@ -1259,8 +1259,16 @@ section{scroll-margin-top:80px}
 
   /* Hero */
   .hero{padding:110px 0 70px;min-height:auto}
-  .hero-inner{grid-template-columns:1fr;gap:50px}
-  .hero-visual{max-width:440px;margin:0 auto;order:1}
+  /* Mobile: mesma foto do hero, apenas reordenada — aparece entre o eyebrow e o título.
+     display:contents faz o eyebrow/h1/foto ficarem no mesmo nível de layout p/ o `order` funcionar. */
+  .hero-inner{display:flex;flex-direction:column;gap:22px}
+  .hero-content{display:contents}
+  .hero-content > .eyebrow{order:1}
+  .hero-visual{order:2;max-width:360px;margin:0 auto}
+  .hero-content > h1{order:3;margin:0}
+  .hero-content > .hero-sub{order:4}
+  .hero-content > .hero-ctas{order:5}
+  .hero-content > .hero-feats{order:6}
   .hero-visual::before{top:-18px;right:-18px;width:50%;height:50%}
   .hero-visual::after{bottom:-18px;left:-18px;width:34%;height:34%}
   .hero-tag{bottom:20px;left:-12px;padding:12px 18px;font-size:12px}
@@ -1756,6 +1764,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#metodo">Método PLENE</a>
     <a href="#app">App</a>
     <a href="#depoimentos">Depoimentos</a>
+    <a href="blog/">Blog</a>
   </div>
   <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="nav-cta" style="font-family: Georgia" data-gtm="conversion-click">Agendar consulta</a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -1769,6 +1778,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#app">App</a>
   <a href="#depoimentos">Depoimentos</a>
   <a href="#faq">FAQ</a>
+  <a href="blog/">Blog</a>
   <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="mobile-cta" data-gtm="conversion-click">Agendar no WhatsApp</a>
 </div>
 
@@ -2532,6 +2542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#pilares">Pilares</a>
         <a href="#app">App</a>
         <a href="#faq">FAQ</a>
+        <a href="blog/">Blog</a>
       </div>
       <div class="footer-col">
         <h4>Atendimento</h4>

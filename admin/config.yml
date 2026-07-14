@@ -1,0 +1,55 @@
+# =============================================================
+# Painel Admin — Sveltia CMS (Dra. Daniele Oliveira Figueiredo)
+# Funciona em Vercel + GitHub via OAuth (auth.sveltia.dev)
+# Repositório: github.com/aroeiravillar/LP-DRA-DANIELE-FIGUEIREDO
+# =============================================================
+backend:
+  name: github
+  repo: aroeiravillar/LP-DRA-DANIELE-FIGUEIREDO
+  branch: main
+
+# Pasta onde as imagens dos artigos são salvas
+media_folder: "assets/blog"
+public_folder: "/assets/blog"
+
+# Idioma do painel
+locale: "pt"
+
+# Permite publicar direto (sem fluxo de aprovação)
+publish_mode: simple
+
+# =============================================================
+# Coleções editáveis pelo painel
+# =============================================================
+collections:
+  - name: "blog"
+    label: "Artigos do Blog"
+    label_singular: "Artigo"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    # Prévia dentro do painel
+    summary: "{{title}}  —  {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string", hint: "Inclua a palavra-chave principal. Ex: 'Nutróloga online para emagrecimento: como funciona'" }
+      - { label: "Meta descrição (SEO)", name: "description", widget: "text", hint: "Resumo de até 160 caracteres — é o texto que aparece no Google. Escreva como um anúncio do artigo." }
+      - { label: "Palavras-chave (SEO)", name: "keywords", widget: "string", required: false, hint: "Separe por vírgulas. Ex: nutróloga online, emagrecimento, consulta nutrológica" }
+      - { label: "Categoria", name: "category", widget: "select", default: "Nutrologia", options: ["Consulta & Atendimento", "Nutrologia", "Emagrecimento", "Longevidade", "Performance", "Equilíbrio & Bem-estar"] }
+      - { label: "Data de publicação", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, default: "" }
+      - { label: "Autor", name: "author", widget: "string", default: "Dra. Daniele Oliveira Figueiredo" }
+      - { label: "Tempo de leitura (minutos)", name: "reading_time", widget: "number", default: 5, min: 1, value_type: "int" }
+      - { label: "Imagem de capa", name: "image", widget: "image", required: false, hint: "Foto horizontal, de preferência 1200x800. Aparece no card e no topo do artigo." }
+      - { label: "Texto alternativo da imagem", name: "image_alt", widget: "string", required: false, hint: "Descreva a foto em uma frase (acessibilidade + SEO)." }
+      - label: "Perguntas frequentes (FAQ)"
+        name: "faq"
+        widget: "list"
+        required: false
+        label_singular: "Pergunta"
+        summary: "{{fields.question}}"
+        hint: "Opcional, mas ótimo para SEO: perguntas e respostas que podem aparecer direto no Google."
+        fields:
+          - { label: "Pergunta", name: "question", widget: "string" }
+          - { label: "Resposta", name: "answer", widget: "text" }
+      - { label: "Conteúdo do artigo", name: "body", widget: "markdown", hint: "Use subtítulos (H2) para dividir em seções. Parágrafos curtos. Termine chamando para agendar a consulta." }

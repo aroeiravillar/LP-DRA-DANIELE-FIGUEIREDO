@@ -31,6 +31,26 @@ Settings → Pages → Source: branch `main` / root.
 **Servidor próprio**
 Subir o `index.html` para qualquer pasta servida por HTTP.
 
+## Blog + Painel Admin
+
+O blog usa geração estática a partir de markdown, com um painel para a Dra. publicar sozinha.
+
+- **Painel:** `/admin/` — Sveltia CMS (login GitHub). A Dra. escreve o artigo e publica.
+- **Artigos (fonte):** `blog/posts/*.md` (frontmatter + markdown). É o que o painel grava.
+- **Build:** `node build.js` lê os `.md` e gera `blog/<slug>.html`, `blog/index.html` e `sitemap.xml` — com SEO e schema (BlogPosting/Breadcrumb/FAQPage).
+- **Deploy:** a Vercel roda `build.js` automaticamente (ver `vercel.json`).
+
+> ⚠️ **Não edite os HTML dentro de `blog/` à mão** — eles são gerados e serão sobrescritos. Edite o `.md` em `blog/posts/` e rode `node build.js`.
+
+Repositório configurado no painel: `aroeiravillar/LP-DRA-DANIELE-FIGUEIREDO` (branch `main`).
+
+Rodar o build localmente:
+
+```bash
+npm install
+node build.js
+```
+
 ## Créditos
 
 Landing Page feita por **AV Marketing Médico**.

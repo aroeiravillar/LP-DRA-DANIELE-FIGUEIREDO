@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dradanielefigueiredo.com.br/sitemap.xml
