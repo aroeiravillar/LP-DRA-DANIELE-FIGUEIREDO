@@ -15,7 +15,7 @@ const matter = require("gray-matter");
 const { marked } = require("marked");
 
 // ---- Configurações do site --------------------------------------------------
-const SITE_URL = "https://dradanielefigueiredo.com.br";
+const SITE_URL = "https://dradanieleofigueiredo.com";
 const WHATSAPP =
   "https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20agendar%20uma%20consulta%20online%20com%20a%20Dra.%20Daniele.";
 const GTM_ID = "GTM-WGRDJ7ZZ";
@@ -53,6 +53,11 @@ function absUrl(p) {
   if (/^https?:\/\//.test(p)) return p;
   return SITE_URL + (p.startsWith("/") ? "" : "/") + p;
 }
+// Caminho absoluto a partir da raiz do site (à prova de trailing slash / cleanUrls)
+function root(p) {
+  if (!p) return "/";
+  return p.startsWith("/") ? p : "/" + p;
+}
 
 // ---- Componentes de layout (iguais à LP) ------------------------------------
 function head({ title, description, keywords, canonical, ogImage, ogType, jsonld }) {
@@ -70,11 +75,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../icon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="manifest" href="../site.webmanifest">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#4BBEA7">
 
 <title>${esc(title)}</title>
@@ -100,7 +105,7 @@ ${ld}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="blog.css">
+<link rel="stylesheet" href="/blog/blog.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -109,18 +114,18 @@ ${ld}
 
 function nav(activeBlog = true) {
   return `<nav class="nav">
-  <a href="../index.html" class="nav-logo">
-    <img src="../assets/logo.jpeg" alt="Logo Dra. Daniele Oliveira Figueiredo">
+  <a href="/" class="nav-logo">
+    <img src="/assets/logo.jpeg" alt="Logo Dra. Daniele Oliveira Figueiredo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Dra. Daniele Oliveira Figueiredo</span>
       <span class="nav-logo-sub">Nutróloga</span>
     </span>
   </a>
   <div class="nav-links">
-    <a href="../index.html#sobre">Sobre</a>
-    <a href="../index.html#metodo">Método PLENE</a>
-    <a href="../index.html#app">App</a>
-    <a href="./"${activeBlog ? ' class="active"' : ""}>Blog</a>
+    <a href="/#sobre">Sobre</a>
+    <a href="/#metodo">Método PLENE</a>
+    <a href="/#app">App</a>
+    <a href="/blog/"${activeBlog ? ' class="active"' : ""}>Blog</a>
   </div>
   <a href="${WHATSAPP}" target="_blank" rel="noopener" class="nav-cta" data-gtm="conversion-click">Agendar consulta</a>
 </nav>`;
@@ -132,10 +137,10 @@ function footer() {
     <div class="footer-top">
       <div class="footer-col">
         <h4>Navegação</h4>
-        <a href="../index.html#sobre">Sobre</a>
-        <a href="../index.html#metodo">Método PLENE</a>
-        <a href="../index.html#app">App</a>
-        <a href="./">Blog</a>
+        <a href="/#sobre">Sobre</a>
+        <a href="/#metodo">Método PLENE</a>
+        <a href="/#app">App</a>
+        <a href="/blog/">Blog</a>
       </div>
       <div class="footer-col">
         <h4>Atendimento</h4>
@@ -216,7 +221,7 @@ function renderArticle(post) {
   }
 
   const cover = data.image
-    ? `<figure class="article-cover"><img src="${esc(data.image.replace(/^\//, "../"))}" alt="${esc(data.image_alt || data.title)}"></figure>`
+    ? `<figure class="article-cover"><img src="${esc(root(data.image))}" alt="${esc(data.image_alt || data.title)}"></figure>`
     : "";
 
   const faqHtml = faq.length
@@ -251,7 +256,7 @@ function renderArticle(post) {
     `<article class="article">
   <div class="container-narrow">
     <div class="breadcrumb">
-      <a href="../index.html">Início</a> &nbsp;›&nbsp; <a href="./">Blog</a> &nbsp;›&nbsp; ${esc(data.title)}
+      <a href="/">Início</a> &nbsp;›&nbsp; <a href="/blog/">Blog</a> &nbsp;›&nbsp; ${esc(data.title)}
     </div>
     <div class="article-head">
       <div class="cat">${esc(data.category || "Blog")}</div>
@@ -268,7 +273,7 @@ ${bodyHtml}
       </div>
       ${faqHtml}
       <div class="author-box">
-        <img src="../assets/hero-portrait.jpeg" alt="Dra. Daniele Oliveira Figueiredo, nutróloga">
+        <img src="/assets/hero-portrait.jpeg" alt="Dra. Daniele Oliveira Figueiredo, nutróloga">
         <div>
           <div class="who">Dra. Daniele Oliveira Figueiredo</div>
           <div class="crm">Médica Nutróloga · CRMMG 58325</div>
@@ -290,9 +295,9 @@ function renderIndex(posts) {
     .map((p) => {
       const d = p.data;
       const thumb = d.image
-        ? `<div class="thumb"><img src="${esc(d.image.replace(/^\//, "../"))}" alt="${esc(d.image_alt || d.title)}"></div>`
+        ? `<div class="thumb"><img src="${esc(root(d.image))}" alt="${esc(d.image_alt || d.title)}"></div>`
         : `<div class="thumb"></div>`;
-      return `    <a href="${p.slug}.html" class="post-card" data-gtm="blog-post-click">
+      return `    <a href="/blog/${p.slug}.html" class="post-card" data-gtm="blog-post-click">
       ${thumb}
       <div class="body">
         <div class="cat">${esc(d.category || "Blog")}</div>
