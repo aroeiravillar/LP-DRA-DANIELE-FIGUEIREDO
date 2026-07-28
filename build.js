@@ -15,7 +15,7 @@ const matter = require("gray-matter");
 const { marked } = require("marked");
 
 // ---- Configurações do site --------------------------------------------------
-const SITE_URL = "https://dradanieleofigueiredo.com";
+const SITE_URL = "https://www.dradanieleofigueiredo.com";
 const WHATSAPP =
   "https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20agendar%20uma%20consulta%20online%20com%20a%20Dra.%20Daniele.";
 const GTM_ID = "GTM-WGRDJ7ZZ";
@@ -129,6 +129,7 @@ function nav(activeBlog = true) {
     <a href="/#sobre">Sobre</a>
     <a href="/#metodo">Método PLENE</a>
     <a href="/#app">App</a>
+    <a href="/#depoimentos">Depoimentos</a>
     <a href="/blog/"${activeBlog ? ' class="active"' : ""}>Blog</a>
   </div>
   <a href="${WHATSAPP}" target="_blank" rel="noopener" class="nav-cta" data-gtm="conversion-click">Agendar consulta</a>
@@ -144,6 +145,7 @@ function footer() {
         <a href="/#sobre">Sobre</a>
         <a href="/#metodo">Método PLENE</a>
         <a href="/#app">App</a>
+        <a href="/#depoimentos">Depoimentos</a>
         <a href="/blog/">Blog</a>
       </div>
       <div class="footer-col">
@@ -175,7 +177,8 @@ function renderArticle(post) {
   data.title = noDash(data.title);
   if (data.description) data.description = noDash(data.description);
   if (Array.isArray(data.faq)) data.faq = data.faq.map((f) => f && ({ question: noDash(f.question), answer: noDash(f.answer) }));
-  const canonical = `${SITE_URL}/blog/${slug}.html`;
+  // URL real servida (cleanUrls no Vercel): sem extensão .html
+  const canonical = `${SITE_URL}/blog/${slug}`;
   const ogImage = absUrl(data.image) || `${SITE_URL}/assets/hero-portrait.jpeg`;
   const bodyHtml = marked.parse(noDash(content));
 
@@ -209,7 +212,7 @@ function renderArticle(post) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Início", item: SITE_URL + "/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: SITE_URL + "/blog/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: SITE_URL + "/blog" },
         { "@type": "ListItem", position: 3, name: data.title },
       ],
     },
@@ -321,12 +324,12 @@ function renderIndex(posts) {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: "Blog · Dra. Daniele Oliveira Figueiredo",
-    url: SITE_URL + "/blog/",
+    url: SITE_URL + "/blog",
     inLanguage: "pt-BR",
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.data.title,
-      url: `${SITE_URL}/blog/${p.slug}.html`,
+      url: `${SITE_URL}/blog/${p.slug}`,
       datePublished: isoDate(p.data.date),
     })),
   };
@@ -337,7 +340,7 @@ function renderIndex(posts) {
       description:
         "Conteúdos sobre nutrologia, emagrecimento, longevidade e saúde escritos pela Dra. Daniele Oliveira Figueiredo, nutróloga particular (CRMMG 58325). Atendimento 100% online para todo o Brasil.",
       keywords: "",
-      canonical: SITE_URL + "/blog/",
+      canonical: SITE_URL + "/blog",
       ogImage: SITE_URL + "/assets/hero-portrait.jpeg",
       ogType: "website",
       jsonld: [jsonld],
@@ -365,9 +368,9 @@ ${cards || '    <p style="grid-column:1/-1;color:var(--ink-muted)">Em breve, nov
 function renderSitemap(posts) {
   const urls = [
     { loc: SITE_URL + "/", priority: "1.0", freq: "monthly", lastmod: isoDate(new Date()) },
-    { loc: SITE_URL + "/blog/", priority: "0.8", freq: "weekly", lastmod: isoDate(new Date()) },
+    { loc: SITE_URL + "/blog", priority: "0.8", freq: "weekly", lastmod: isoDate(new Date()) },
     ...posts.map((p) => ({
-      loc: `${SITE_URL}/blog/${p.slug}.html`,
+      loc: `${SITE_URL}/blog/${p.slug}`,
       priority: "0.7",
       freq: "monthly",
       lastmod: isoDate(p.data.date) || isoDate(new Date()),
