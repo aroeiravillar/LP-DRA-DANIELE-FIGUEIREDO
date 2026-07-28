@@ -25,7 +25,7 @@ Procurar por uma **nutróloga online para emagrecimento** costuma vir junto de u
 
 É uma **médica nutróloga** que acompanha o seu processo de emagrecimento por videochamada, de onde você estiver. Diferente de outras abordagens, a nutrologia parte de uma visão clínica: investiga **por que** o peso subiu ou não desce, avalia exames e trata a causa, não apenas o sintoma.
 
-No formato online, você tem a mesma avaliação de uma consulta presencial, com a praticidade de ser atendida sem deslocamento. Se quiser entender o formato em detalhe, veja também [como funciona a consulta com nutróloga particular online](/blog/consulta-com-nutrologa-particular-online).
+No formato online, você tem a mesma avaliação de uma consulta presencial, com a praticidade de ser atendido sem deslocamento. Se quiser entender o formato em detalhe, veja também [como funciona a consulta com nutróloga particular online](/blog/consulta-com-nutrologa-particular-online).
 
 ## Por que emagrecer com uma médica faz diferença
 
@@ -72,4 +72,4 @@ O acompanhamento com nutróloga online para emagrecimento costuma ser procurado 
 
 ## Como dar o primeiro passo
 
-O começo é simples: uma conversa. No agendamento você escolhe o horário, recebe as orientações de preparo e, no dia, é atendida por videochamada. A partir daí, um plano feito para o seu corpo e a sua rotina.
+O começo é simples: uma conversa. No agendamento você escolhe o horário, recebe as orientações de preparo e, no dia, é atendido por videochamada. A partir daí, um plano feito para o seu corpo e a sua rotina.

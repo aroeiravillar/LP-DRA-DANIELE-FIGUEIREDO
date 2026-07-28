@@ -278,7 +278,7 @@ function renderArticle(post) {
     <div class="article-body">
 ${bodyHtml}
       <div class="cta-box">
-        <h3>Pronta para começar seu acompanhamento?</h3>
+        <h3>Pronto para começar seu acompanhamento?</h3>
         <p>Agende sua consulta online com a Dra. Daniele e receba um plano feito para o seu corpo e a sua rotina, de onde você estiver.</p>
         <a href="${WHATSAPP}" target="_blank" rel="noopener" class="btn-wa" data-gtm="conversion-click">Agendar pelo WhatsApp</a>
       </div>

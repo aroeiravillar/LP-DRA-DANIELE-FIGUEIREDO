@@ -20,3 +20,14 @@ ehthumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Node / build
+node_modules/
+.vercel/
+
+# Claude Code (config local — não versionar)
+.claude/
+settings.local.json
+
+# Fotos originais do WhatsApp (usamos as versões com nome limpo)
+assets/WhatsApp*

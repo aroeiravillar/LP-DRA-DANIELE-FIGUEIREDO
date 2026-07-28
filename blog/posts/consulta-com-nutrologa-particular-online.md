@@ -60,7 +60,7 @@ A consulta com nutróloga particular online costuma ser procurada por pessoas qu
 - Mais energia, disposição e qualidade de sono;
 - Avaliação de composição corporal e ajuste de hábitos;
 - Longevidade e prevenção, cuidando da saúde a longo prazo;
-- Praticidade de ser atendida de qualquer lugar do Brasil.
+- Praticidade de ser atendido de qualquer lugar do Brasil.
 
 ## Quanto custa uma consulta com nutróloga particular?
 
@@ -70,4 +70,4 @@ Para saber o valor atualizado e a disponibilidade de horários, basta chamar no 
 
 ## Como agendar sua consulta online
 
-O agendamento é feito pelo WhatsApp, de forma rápida: você escolhe o horário, recebe as orientações de preparo e, no dia marcado, é atendida por videochamada. Simples assim, sem deslocamento, sem sala de espera.
+O agendamento é feito pelo WhatsApp, de forma rápida: você escolhe o horário, recebe as orientações de preparo e, no dia marcado, é atendido por videochamada. Simples assim, sem deslocamento, sem sala de espera.
