@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dradanieleofigueiredo.com/sitemap.xml
+Sitemap: https://www.dradanieleofigueiredo.com/sitemap.xml
