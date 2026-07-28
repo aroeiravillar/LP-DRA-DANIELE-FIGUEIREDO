@@ -119,7 +119,7 @@ ${ld}
 function nav(activeBlog = true) {
   return `<nav class="nav">
   <a href="/" class="nav-logo">
-    <img src="/assets/logo.jpeg" alt="Logo Dra. Daniele Oliveira Figueiredo">
+    <img src="/assets/logo-mark.png" alt="Logo Dra. Daniele Oliveira Figueiredo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Dra. Daniele Oliveira Figueiredo</span>
       <span class="nav-logo-sub">Nutróloga</span>

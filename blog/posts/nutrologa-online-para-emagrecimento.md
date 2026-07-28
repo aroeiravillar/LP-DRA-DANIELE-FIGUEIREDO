@@ -6,7 +6,7 @@ category: "Emagrecimento"
 date: 2026-07-28
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
-image: "/assets/portrait-plants.jpeg"
+image: "/assets/dra-daniele-sorrindo.jpeg"
 image_alt: "Nutróloga online para emagrecimento, Dra. Daniele Oliveira Figueiredo"
 faq:
   - question: "Uma nutróloga online consegue ajudar no emagrecimento de verdade?"
