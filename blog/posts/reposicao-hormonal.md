@@ -8,6 +8,7 @@ author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 6
 image: "/assets/reposicao-hormonal.jpeg"
 image_alt: "Reposição hormonal e equilíbrio hormonal, Dra. Daniele Oliveira Figueiredo, nutróloga"
+image_position: "center 8%"
 faq:
   - question: "Reposição hormonal serve para emagrecer?"
     answer: "A reposição hormonal não é um tratamento para emagrecer. Quando existe uma deficiência real, reequilibrar hormônios pode contribuir para o bem-estar e o metabolismo, mas ela não substitui alimentação, sono e hábitos, e só deve ser feita com indicação médica individual."

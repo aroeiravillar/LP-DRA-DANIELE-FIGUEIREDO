@@ -231,8 +231,9 @@ function renderArticle(post) {
     });
   }
 
+  const posStyle = data.image_position ? ` style="object-position:${esc(data.image_position)}"` : "";
   const cover = data.image
-    ? `<figure class="article-cover"><img src="${esc(root(data.image))}" alt="${esc(data.image_alt || data.title)}"></figure>`
+    ? `<figure class="article-cover"><img src="${esc(root(data.image))}" alt="${esc(data.image_alt || data.title)}"${posStyle}></figure>`
     : "";
 
   const faqHtml = faq.length
@@ -305,8 +306,9 @@ function renderIndex(posts) {
   const cards = posts
     .map((p) => {
       const d = p.data;
+      const posStyle = d.image_position ? ` style="object-position:${esc(d.image_position)}"` : "";
       const thumb = d.image
-        ? `<div class="thumb"><img src="${esc(root(d.image))}" alt="${esc(d.image_alt || d.title)}"></div>`
+        ? `<div class="thumb"><img src="${esc(root(d.image))}" alt="${esc(d.image_alt || d.title)}"${posStyle}></div>`
         : `<div class="thumb"></div>`;
       return `    <a href="/blog/${p.slug}.html" class="post-card" data-gtm="blog-post-click">
       ${thumb}
