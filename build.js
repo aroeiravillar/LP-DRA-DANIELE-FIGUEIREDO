@@ -17,7 +17,7 @@ const { marked } = require("marked");
 // ---- Configurações do site --------------------------------------------------
 const SITE_URL = "https://www.dradanieleofigueiredo.com";
 const WHATSAPP =
-  "https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20agendar%20uma%20consulta%20online%20com%20a%20Dra.%20Daniele.";
+  "https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele.";
 const GTM_ID = "GTM-WGRDJ7ZZ";
 
 const ROOT = __dirname;
@@ -170,6 +170,15 @@ function footer() {
 </body></html>`;
 }
 
+// Botão flutuante do WhatsApp (igual à LP), presente na listagem e em cada artigo
+function waFloat() {
+  return `<a href="${WHATSAPP}" target="_blank" rel="noopener" class="wa-float" aria-label="Fale no WhatsApp" data-gtm="conversion-click">
+  <span class="wa-tooltip">Fale comigo no WhatsApp</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.004 2C6.486 2 2 6.486 2 12.003c0 1.764.462 3.482 1.338 4.998L2 22l5.127-1.317a9.974 9.974 0 0 0 4.876 1.273h.004c5.515 0 10-4.486 10.003-10.003 0-2.671-1.04-5.183-2.928-7.073A9.93 9.93 0 0 0 12.004 2zm0 18.134h-.003a8.3 8.3 0 0 1-4.225-1.156l-.303-.18-3.142.807.84-3.064-.197-.314a8.285 8.285 0 0 1-1.268-4.424c.002-4.59 3.737-8.323 8.33-8.323 2.223 0 4.312.867 5.884 2.44a8.27 8.27 0 0 1 2.437 5.888c-.002 4.59-3.736 8.326-8.323 8.326zm4.566-6.236c-.25-.125-1.48-.731-1.71-.815-.229-.084-.396-.125-.563.125s-.645.814-.791.982c-.145.167-.29.187-.54.062-.249-.125-1.055-.389-2.01-1.241-.743-.662-1.244-1.48-1.39-1.73-.146-.25-.015-.385.109-.51.112-.111.25-.29.374-.436.125-.145.167-.25.25-.415.084-.167.042-.312-.02-.437-.063-.125-.564-1.36-.772-1.86-.204-.49-.412-.424-.564-.432-.146-.007-.312-.008-.48-.008a.916.916 0 0 0-.666.313c-.229.25-.873.854-.873 2.082 0 1.228.894 2.415 1.019 2.582.125.167 1.76 2.686 4.263 3.767.595.257 1.06.41 1.422.526.598.19 1.141.163 1.571.099.48-.071 1.48-.604 1.688-1.188.209-.583.209-1.083.146-1.188-.063-.105-.229-.167-.479-.292z"></path></svg>
+</a>
+`;
+}
+
 // ---- Renderização de um artigo ---------------------------------------------
 function renderArticle(post) {
   const { data, content, slug } = post;
@@ -297,6 +306,7 @@ ${bodyHtml}
   </div>
 </article>
 ` +
+    waFloat() +
     footer()
   );
 }
@@ -362,6 +372,7 @@ ${cards || '    <p style="grid-column:1/-1;color:var(--ink-muted)">Em breve, nov
   </div>
 </main>
 ` +
+    waFloat() +
     footer()
   );
 }
