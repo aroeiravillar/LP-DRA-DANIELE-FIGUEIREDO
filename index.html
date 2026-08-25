@@ -112,8 +112,20 @@ w.addEventListener('load',function(){setTimeout(startGTM,2000);});
   --ink: #2B2B2B;
   --ink-soft: #4a4a4a;
   --ink-muted: #6b6b6b;
-  --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Fraunces', 'Fraunces Fallback', 'Times New Roman', Georgia, serif;
   --sans: 'Instrument Sans', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Fallback com métricas idênticas à Fraunces (size-adjust medido: 87.8%) — o texto
+   ocupa exatamente o mesmo espaço antes da fonte carregar, eliminando o CLS do H1.
+   Ver [[lp-performance]]. */
+@font-face{
+  font-family:'Fraunces Fallback';
+  src:local('Times New Roman'), local('Times'), local('Liberation Serif'), local('Tinos');
+  size-adjust:87.8%;
+  ascent-override:97.8%;
+  descent-override:25.5%;
+  line-gap-override:0%;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
