@@ -156,7 +156,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/blog/" class="active">Blog</a>
   </div>
   <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="nav-cta" data-gtm="conversion-click">Agendar consulta</a>
-</nav><article class="article">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="/#sobre">Sobre</a>
+  <a href="/#metodo">Método PLENE</a>
+  <a href="/#app">App</a>
+  <a href="/#depoimentos">Depoimentos</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/blog/">Blog</a>
+  <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="mobile-cta" data-gtm="conversion-click">Agendar no WhatsApp</a>
+</div><article class="article">
   <div class="container-narrow">
     <div class="breadcrumb">
       <a href="/">Início</a> &nbsp;›&nbsp; <a href="/blog/">Blog</a> &nbsp;›&nbsp; Nutróloga online para emagrecimento: como funciona
@@ -266,4 +278,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var t=document.getElementById('nav-toggle'), m=document.getElementById('mobile-menu');
+  if(t&&m){
+    t.addEventListener('click',function(){
+      var o=t.classList.toggle('open'); m.classList.toggle('open');
+      t.setAttribute('aria-expanded',String(o)); m.setAttribute('aria-hidden',String(!o));
+    });
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+      t.classList.remove('open'); m.classList.remove('open');
+      t.setAttribute('aria-expanded','false'); m.setAttribute('aria-hidden','true');
+    });});
+  }
+})();
+</script>
 </body></html>

@@ -46,6 +46,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "blogPost": [
     {
       "@type": "BlogPosting",
+      "headline": "Menopausa e ganho de peso: por que acontece e o que fazer",
+      "url": "https://www.dradanieleofigueiredo.com/blog/menopausa-e-ganho-de-peso",
+      "datePublished": "2026-08-10"
+    },
+    {
+      "@type": "BlogPosting",
       "headline": "Reposição hormonal: o que é e quando é indicada",
       "url": "https://www.dradanieleofigueiredo.com/blog/reposicao-hormonal",
       "datePublished": "2026-07-31"
@@ -101,7 +107,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/blog/" class="active">Blog</a>
   </div>
   <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="nav-cta" data-gtm="conversion-click">Agendar consulta</a>
-</nav><header class="blog-hero">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="/#sobre">Sobre</a>
+  <a href="/#metodo">Método PLENE</a>
+  <a href="/#app">App</a>
+  <a href="/#depoimentos">Depoimentos</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/blog/">Blog</a>
+  <a href="https://wa.me/5531984196394?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Daniele." target="_blank" rel="noopener" class="mobile-cta" data-gtm="conversion-click">Agendar no WhatsApp</a>
+</div><header class="blog-hero">
   <div class="container">
     <div class="eyebrow">Blog</div>
     <h1>Saúde, nutrologia e longevidade com base em ciência</h1>
@@ -111,6 +129,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <main class="container">
   <div class="post-grid">
+    <a href="/blog/menopausa-e-ganho-de-peso.html" class="post-card" data-gtm="blog-post-click">
+      <div class="thumb"><img src="/assets/menopausa-ganho-de-peso.jpeg" alt="Mulher madura correndo ao ar livre, saúde e bem-estar na menopausa" style="object-position:center 34%"></div>
+      <div class="body">
+        <div class="cat">Equilíbrio &amp; Bem-estar</div>
+        <h2>Menopausa e ganho de peso: por que acontece e o que fazer</h2>
+        <p>A menopausa realmente engorda? Entenda por que o peso sobe nessa fase, onde a gordura se acumula e o que fazer para emagrecer na menopausa com saúde.</p>
+        <span class="more">Ler artigo →</span>
+      </div>
+    </a>
+
     <a href="/blog/reposicao-hormonal.html" class="post-card" data-gtm="blog-post-click">
       <div class="thumb"><img src="/assets/reposicao-hormonal.jpeg" alt="Reposição hormonal e equilíbrio hormonal, Dra. Daniele Oliveira Figueiredo, nutróloga" style="object-position:center 8%"></div>
       <div class="body">
@@ -196,4 +224,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var t=document.getElementById('nav-toggle'), m=document.getElementById('mobile-menu');
+  if(t&&m){
+    t.addEventListener('click',function(){
+      var o=t.classList.toggle('open'); m.classList.toggle('open');
+      t.setAttribute('aria-expanded',String(o)); m.setAttribute('aria-hidden',String(!o));
+    });
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+      t.classList.remove('open'); m.classList.remove('open');
+      t.setAttribute('aria-expanded','false'); m.setAttribute('aria-hidden','true');
+    });});
+  }
+})();
+</script>
 </body></html>

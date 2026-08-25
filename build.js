@@ -133,7 +133,19 @@ function nav(activeBlog = true) {
     <a href="/blog/"${activeBlog ? ' class="active"' : ""}>Blog</a>
   </div>
   <a href="${WHATSAPP}" target="_blank" rel="noopener" class="nav-cta" data-gtm="conversion-click">Agendar consulta</a>
-</nav>`;
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="/#sobre">Sobre</a>
+  <a href="/#metodo">Método PLENE</a>
+  <a href="/#app">App</a>
+  <a href="/#depoimentos">Depoimentos</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/blog/">Blog</a>
+  <a href="${WHATSAPP}" target="_blank" rel="noopener" class="mobile-cta" data-gtm="conversion-click">Agendar no WhatsApp</a>
+</div>`;
 }
 
 function footer() {
@@ -167,6 +179,21 @@ function footer() {
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var t=document.getElementById('nav-toggle'), m=document.getElementById('mobile-menu');
+  if(t&&m){
+    t.addEventListener('click',function(){
+      var o=t.classList.toggle('open'); m.classList.toggle('open');
+      t.setAttribute('aria-expanded',String(o)); m.setAttribute('aria-hidden',String(!o));
+    });
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+      t.classList.remove('open'); m.classList.remove('open');
+      t.setAttribute('aria-expanded','false'); m.setAttribute('aria-hidden','true');
+    });});
+  }
+})();
+</script>
 </body></html>`;
 }
 
