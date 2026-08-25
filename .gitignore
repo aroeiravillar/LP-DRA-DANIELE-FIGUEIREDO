@@ -31,3 +31,6 @@ settings.local.json
 
 # Fotos originais do WhatsApp (usamos as versões com nome limpo)
 assets/WhatsApp*
+
+# Backup local da otimizacao (nao versionar)
+index.html.bak
