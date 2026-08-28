@@ -3,7 +3,7 @@ title: "Reposição hormonal: o que é e quando é indicada"
 description: "Entenda o que é a reposição hormonal, quando ela pode ser indicada, os cuidados e riscos envolvidos e por que a avaliação médica individual é indispensável."
 keywords: "reposição hormonal, reposição hormonal o que é, quando fazer reposição hormonal, reposição hormonal feminina, hormônios, equilíbrio hormonal"
 category: "Equilíbrio & Bem-estar"
-date: 2026-07-31
+date: 2026-08-06
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 6
 image: "/assets/reposicao-hormonal.jpeg"

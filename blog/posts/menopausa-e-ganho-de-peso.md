@@ -3,7 +3,7 @@ title: "Menopausa e ganho de peso: por que acontece e o que fazer"
 description: "A menopausa realmente engorda? Entenda por que o peso sobe nessa fase, onde a gordura se acumula e o que fazer para emagrecer na menopausa com saúde."
 keywords: "menopausa e ganho de peso, menopausa engorda, emagrecer na menopausa, por que engordo na menopausa, gordura abdominal menopausa, peso na menopausa"
 category: "Equilíbrio & Bem-estar"
-date: 2026-08-10
+date: 2026-08-25
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
 image: "/assets/menopausa-ganho-de-peso.jpeg"

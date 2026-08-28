@@ -3,7 +3,7 @@ title: "Como emagrecer de forma saudável e sem efeito sanfona"
 description: "Descubra como emagrecer de forma saudável e sem efeito sanfona: por que o peso volta, os pilares de um emagrecimento sustentável e o papel do acompanhamento médico."
 keywords: "como emagrecer de forma saudável, emagrecer sem efeito sanfona, emagrecimento saudável, efeito sanfona, emagrecer com saúde, perder peso de forma saudável"
 category: "Emagrecimento"
-date: 2026-07-28
+date: 2026-07-31
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
 image: "/assets/emagrecimento-saudavel.jpeg"
