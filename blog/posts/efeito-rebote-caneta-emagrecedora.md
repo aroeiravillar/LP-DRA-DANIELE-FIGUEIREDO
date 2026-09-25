@@ -6,8 +6,9 @@ category: "Emagrecimento"
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
 keywords: "efeito rebote, caneta emagrecedora, reganho de peso, parar Ozempic, parar Mounjaro, semaglutida, tirzepatida, manter o peso, nutróloga online"
-image: "/assets/efeito-rebote-caneta.webp"
-image_alt: "Canetas emagrecedoras injetáveis, tipo GLP-1, ao lado de fita métrica, ilustrando o tema do efeito rebote"
+image: "/assets/efeito-rebote.webp"
+image_alt: "Pessoa aplicando uma caneta emagrecedora injetável no abdômen, ilustrando o tema do efeito rebote"
+image_position: "center 50%"
 faq:
   - question: "Toda pessoa que para a caneta emagrecedora engorda de novo?"
     answer: "Não é uma regra absoluta, mas o reganho é comum quando a medicação é interrompida sem que hábitos, alimentação e massa muscular tenham sido trabalhados. O risco existe para a maioria e por isso a fase de manutenção precisa ser planejada, de preferência com acompanhamento médico."
