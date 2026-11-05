@@ -5,6 +5,9 @@ date: 2026-11-05
 category: "Nutrologia"
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
+image: "/assets/ferritina-baixa.webp"
+image_alt: "Mulher sentada na cama pela manhã com as mãos no rosto, aparentando cansaço"
+image_position: "center 25%"
 keywords: "ferritina baixa, ferritina baixa sintomas, deficiência de ferro, ferritina baixa sem anemia, ferritina baixa queda de cabelo, cansaço e ferritina, anemia ferropriva, nutróloga online"
 faq:
   - question: "Dá para ter ferritina baixa sem estar com anemia?"
