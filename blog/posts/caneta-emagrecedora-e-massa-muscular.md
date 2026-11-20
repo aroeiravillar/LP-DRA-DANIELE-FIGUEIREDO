@@ -5,6 +5,9 @@ date: 2026-11-20
 category: "Emagrecimento"
 author: "Dra. Daniele Oliveira Figueiredo"
 reading_time: 7
+image: "/assets/caneta-massa-muscular.webp"
+image_alt: "Mulher de costas fazendo treino de força com halter, representando a preservação da massa muscular"
+image_position: "center 30%"
 keywords: "caneta emagrecedora massa muscular, caneta emagrecedora perda de músculo, emagrecer sem perder massa muscular, tirzepatida massa muscular, semaglutida massa muscular, perda de massa magra, proteína e caneta emagrecedora, nutróloga online"
 faq:
   - question: "A caneta emagrecedora faz perder massa muscular?"
